@@ -13,3 +13,11 @@ export const UserSignUpSchema = z.object({
 export const onRampSchema = z.object({
         amount : z.number().positive()
     })
+export const MarketSchema = z.object({
+  title: z.string().min(1),
+  totalIssued: z.number().nonnegative(),
+});
+
+export const ResolveMarketSchema = z.object({
+  resolution: z.enum(["YES", "NO"]),
+});
