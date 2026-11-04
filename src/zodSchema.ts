@@ -21,3 +21,10 @@ export const MarketSchema = z.object({
 export const ResolveMarketSchema = z.object({
   resolution: z.enum(["YES", "NO"]),
 });
+
+export const SplitSchema = z.object({
+     amount : z.number().nonnegative() 
+})
+export const MergeSchema = z.object({
+     amount : z.number().nonnegative() 
+})
